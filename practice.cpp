@@ -9,7 +9,9 @@ int main(){
     else if(x >= 'a' && x <= 'z'){
          cout << "ALPHA\nIS SMALL"<<endl;
     }
-    
+    else if(x >= '0' && x <= '9'){
+        cout << "IS DIGIT"<<endl;
+    }
 
 
     return 0;
