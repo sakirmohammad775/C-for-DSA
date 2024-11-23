@@ -1,7 +1,9 @@
 #include<iostream> 
+using namespace std;
 int main(){
     int x;
-    std::cin>>x;
-    std::cout<<x;
+    char c='a';
+    cin>>x;
+    cout<<x << (char)x<<endl;
     return 0;
 }
