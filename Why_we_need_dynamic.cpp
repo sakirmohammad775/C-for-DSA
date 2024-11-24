@@ -9,7 +9,7 @@ int main()
     for(int i=0; i<n; i++){
         cin >> arr[i];
     }
-    sort(arr,arr+4);//sort function in c++ (a+5 endl)
+    sort(arr,arr+n);//sort function in c++ (a+5 endl)
     sort (arr,arr+n,greater<int>());
     for(int i=0; i<n; i++){
         cout << arr[i] << " ";
