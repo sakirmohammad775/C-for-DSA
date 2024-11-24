@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 /*
 Problem Statement
@@ -38,22 +38,36 @@ Sample Output 0
 1 sakib A 50
 */
 
-class Student{
-    public:
+class Student
+{
+public:
     int id;
     char name[100];
-    int grade; 
+    char grade;
     int marks;
-
 };
-int main(){
+
+int main()
+{
     int n;
-    cin>>n;
-    Student arr[n];
-    for(int i=0; i<n; i++){
-        cin>>arr[i].id>>arr[i].name>>arr[i].grade>>arr[i].marks;
+    cin >> n;
+    for(int j=0;j<n;j++)
+    {
+        Student arr[3];
+        for (int i = 0; i < 3; i++)
+        {
+
+            cin >> arr[i].id >> arr[i].name >> arr[i].grade >> arr[i].marks;
+        }
+        Student maxMarksStudent = arr[0];
+        for (int i = 1; i < 3; i++)
+        {
+            if (arr[i].marks > maxMarksStudent.marks || (arr[i].marks == maxMarksStudent.marks && arr[i].id < maxMarksStudent.id))
+            {
+                maxMarksStudent = arr[i];
+            }
+        }
+        cout << maxMarksStudent.id << " " << maxMarksStudent.name << " " << maxMarksStudent.grade << " " << maxMarksStudent.marks << endl;
     }
-    for(int i=0; i<n; i++){
-        cout<<arr[i].id<<arr[i].name<<" "<<arr[i].grade<<arr[i].marks<<endl;
-    }
+    return 0;
 }
