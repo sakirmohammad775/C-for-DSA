@@ -10,6 +10,7 @@ int main(){
     else{
         cout<<"Unequal strings"<<endl;
         cout<<s1<<endl;
+        cout<<s1<<endl;
     }
     return 0;
 }
