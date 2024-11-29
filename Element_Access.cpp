@@ -1,13 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    string s;
-    cin >> s;
-    cout << s[0] << endl;
-    string s2="Hi ";
-    s=s2;
-    s+=s2;
-    cout<<s<<endl;
+    string s="ella";
+    // for(int i=0; i<s.size(); i++){
+    //     cout<<s[i]<<" ";
+    // }
+    cout<<*s.begin()<<" "<<*(s.end()-1)<<endl;
 
     return 0;
 }
