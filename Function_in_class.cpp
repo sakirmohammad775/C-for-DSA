@@ -16,5 +16,6 @@ public:
 int main()
 {
     Student student1("John Doe", 123);
+    cout << student1.name << endl;
     return 0;
 }
