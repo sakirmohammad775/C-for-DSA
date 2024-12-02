@@ -11,11 +11,15 @@ public:
         this->name = name;
         this->roll = roll;
     }
+    void hello(){
+        cout<<"Hello!"<<name<<endl;
+    }
 };
 
 int main()
 {
     Student student1("John Doe", 123);
     cout << student1.name << endl;
+    student1.hello();
     return 0;
 }
