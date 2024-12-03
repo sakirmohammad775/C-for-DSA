@@ -18,12 +18,7 @@ For each test cases output the modified string S.
 Sample Input 0
 
 2
-rahimisagoodguy good
-canyoutellmewhereicanfindheriwillbegreatefultoyouifyoutellmetheanswer you
-Sample Output 0
 
-rahimisa#guy
-can#tellmewhereicanfindheriwillbegreatefulto#if#tellmetheanswer
  */
 #include<bits/stdc++.h>
 using namespace std;
