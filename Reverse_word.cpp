@@ -16,7 +16,7 @@ Output Format
 
 For each test cases output the modified string S.
 Sample Input 0
-sampple input
+sampple
 2
 
  */
