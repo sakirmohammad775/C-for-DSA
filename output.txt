@@ -1,5 +1,1 @@
-Bijoy 7 E 29 68 99
-Asif 10 C 27 55 60
-Joy 9 G 28 66 45
-Shojoy 9 E 26 40 50
-Munna 8 D 25 50 30
+1 2 3 4 5 0
