@@ -1,1 +1,1 @@
-    // cout << *s.begin() << " " << *(s.end() - 1) << endl;
+cout<<(b?"YES":"NO")<<endl;
