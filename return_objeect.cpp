@@ -4,12 +4,12 @@ class student
 {
 public:
     int roll;
-    int cls;
+    int grade;
     double gpa;
-    student(int roll, int cls, double gpa)
+    student(int roll, int grade, double gpa)
     {
         (*this). roll = roll;
-        (*this). cls = cls;
+        (*this). grade = grade;
         (*this). gpa = gpa;
     }
 };
@@ -20,6 +20,6 @@ student fun(){
 int main()
 {    
     student obj=fun() ;// rahim()->constructor caLL
-    cout << obj.roll  << " " << obj.cls << " " << obj.gpa << endl;
+    cout << obj.roll  << " " << obj.grade << " " << obj.gpa << endl;
     return 0;
 }

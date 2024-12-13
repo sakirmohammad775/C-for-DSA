@@ -4,18 +4,18 @@ class student
 {
 public:
     int roll;
-    int cls;
+    int grade;
     double gpa;
     student(int r, int c, double g)
     {
         roll = r;
-        cls = c;
+        grade = c;
         gpa = g;
     }
 };
 int main()
 {
     student rahim(3, 24, 3.5); // rahim()->constructor caLL
-    cout << rahim.roll << " " << rahim.cls << " " << rahim.gpa << endl;
+    cout << rahim.roll << " " << rahim.grade << " " << rahim.gpa << endl;
     return 0;
 }

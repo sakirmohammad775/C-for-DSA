@@ -3,7 +3,7 @@ using namespace std;
 /*
 Problem Statement
 
-A student has several pieces of information, such as a unique ID, name, section, and total marks. You will be given the information of three students. Your task is to determine and print the details of the student who achieved the highest total marks. In the case of a tie (i.e., two or more students having the same total marks), print the information of the student with the smaller ID.
+A student has several pieces of information, such as a unique ID, name, section, and total marks. You will be given the information of three s. Your task is to determine and print the details of the student who achieved the highest total marks. In the case of a tie (i.e., two or more s having the same total marks), print the information of the student with the smaller ID.
 
 Input Format
 
