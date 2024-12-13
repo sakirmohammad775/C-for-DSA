@@ -1,24 +1,33 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
-
-int main() {
-    // Input the value of N
-    int N;
-    cin >> N;
-
-    // Generate the pattern for the given odd integer N
-    for (int i = 0; i < N; ++i) {
-        for (int j = 0; j < N; ++j) {
-            if (j == i) {                // Diagonal from top-left to bottom-right
+int main()
+{
+    int n;
+    ;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        for (int k = 0; k < n; k++)
+        {
+            if (i == k && i + k == n - 1)
+            {
+                cout << "X";
+            }
+            else if (k == i)
+            {
                 cout << "\\";
-            } else if (j == N - i - 1) { // Diagonal from top-right to bottom-left
+            }
+            else if (i + k == n - 1)
+            {
                 cout << "/";
-            } else {
-                cout << " ";            // Spaces
+            }
+            else
+            {
+                cout << " ";
             }
         }
-        cout << endl; // Move to the next line
+        cout << endl;
     }
-
     return 0;
 }
