@@ -12,6 +12,7 @@ int main()
          int l,r;
          cin >> l >> r;
          int sum=0;
+         //time limit exceed !! so reduce... 
          for(int i = l; i <= r; i++){//o(n)
             sum += v[i];
          }//o(QN)
