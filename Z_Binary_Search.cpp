@@ -9,32 +9,31 @@ int main()
     {
         cin >> a[i];
     }
-    sort(a, a + n);
-    for (int i = 0; i < n; i++)
+    sort(a,a+n);
+    
+    while (q--)
+    {int value;
+    cin >> value;
+    int flag = 0;
+    int l = 0;
+    int r = n - 1;
+    while (l<=r)
     {
-        int x;
-        cin >> x;
-        int flag = 0;
-        int l = 0;
-        int r = l - 1;
-
-        while (l<=r)
+        int mid = (l + r) / 2;
+        if (a[mid] == value)
         {
-            int mid = (l + r) / 2;
-            if (a[mid] == x)
-            {
-                flag = 1;
-                break;
-            }
-            else if (a[mid] < x)
-            {
-                r = mid - 1;
-            }
-            else
-            {
-                l = mid + 1;
-            }
+            flag = 1;
+            break;
         }
+        else if (a[mid] > value)
+        {
+            r = mid - 1;
+        }
+        else
+        {
+            l = mid + 1;
+        }
+    }
         if (flag == 1)
         {
             cout << "found" << endl;
@@ -43,7 +42,7 @@ int main()
         {
             cout << "not found" << endl;
         }
-    }
 
-    return 0;
+    }
+        return 0;
 }
