@@ -4,9 +4,21 @@ using namespace std;
 class Node{
     public:
     int val;
-    int* next;
-}
+    Node* next;
+};
 int main(){
+Node a,b,c;//declare 3 node in store,store with value and address
+a.val=10;
+b.val=20;
+c.val=30;
 
+a.next=&b;
+b.next=&c;
+c.next=NULL;
+
+cout<<a.val<<" "<<b.val<<" "<<c.val<<endl;
+cout<<a.next->val<<endl;
+cout<<(*a.next).val<<endl;
+cout<<(*a.next).next->val<<endl;
     return 0;
 }
