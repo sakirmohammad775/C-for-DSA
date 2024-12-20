@@ -17,7 +17,7 @@ void insert_at_position(Node *&head, int index, int val) // add the new value at
 {
     Node* newnode=new Node(val); 
     Node* tmp=head;
-    for(int i=1;i<index;i++){
+    for(int i=1;i<index;i++){  // O(N) or O(index)
         tmp=tmp->next;
     }
     newnode->next=tmp->next;

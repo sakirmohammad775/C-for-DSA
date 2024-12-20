@@ -44,13 +44,14 @@ void print_list(Node *head)
 
 int main()
 {
-    Node *head = new Node(1);
+    Node *head = new Node(1); //track first one as a head
     Node *a = new Node(2);
-    Node *b = new Node(3);
+    Node *tail = new Node(3);//track last one as a tail
+    
 
     head->next = a;
-    a->next = b;
-
+    a->next = tail;
+    
     insert_at_tail(head, 40);
     print_list(head);
     return 0;
