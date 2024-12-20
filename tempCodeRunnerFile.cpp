@@ -1,8 +1,9 @@
-while(q--){//o(q)
-    //      int l,r;
-    //      cin >> l >> r;
-    //      int sum=0;
-    //      //time limit exceed !! so reduce... 
-    //      int sum=pre[r]-pre[l];
-    //      cout << sum << endl;
-    // }
+void print_list(Node *head)
+{
+    Node *tmp = head;
+    while (tmp != NULL) 
+    {
+        cout << tmp->val << endl;
+        tmp = tmp->next;
+    }
+}

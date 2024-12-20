@@ -26,7 +26,7 @@ void insert_at_tail(Node *&head, Node *&tail, int val) // Add a new value at the
     tail = newnode;       // Update the tail pointer to point to the new node
 }
 
-void print_list(Node *head) // Print all the nodes of the linked list
+void print_rlist(Node *head) // Print all the nodes of the linked list
 {
     Node *tmp = head;
     while (tmp != NULL) // Iterate until we reach the end of the list
@@ -35,6 +35,15 @@ void print_list(Node *head) // Print all the nodes of the linked list
         tmp = tmp->next;          // Move to the next node
     }
 }
+
+void print_reverse_list(Node* tmp){
+    //base
+    if(tmp==NULL){
+        return;
+    }
+    print_reverse_list(tmp->next);
+    cout<<tmp->val<<endl;
+};
 
 int main()
 {
@@ -53,6 +62,6 @@ int main()
         insert_at_tail(head, tail, val); // Add the value to the list
     }
 
-    print_list(head); // Print the final linked list
+    print_reverse_list(head); // Print the final linked list
     return 0;         // Exit the program
 }
