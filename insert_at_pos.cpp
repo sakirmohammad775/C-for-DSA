@@ -21,6 +21,7 @@ void insert_at_position(Node *&head, int index, int val) // add the new value at
         tmp=tmp->next;
     }
     newnode->next=tmp->next;
+    tmp->next=newnode;
 }
  
 void print_list(Node *head)
