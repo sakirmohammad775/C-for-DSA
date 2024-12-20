@@ -13,7 +13,7 @@ public:
     }
 };
 
-void insert_at_tail(Node *&head, int val) // add the new value at the end of the list
+void insert_at_tail(Node *&head, Node *&tail, int val) // add the new value at the end of the list
 {
     Node *newnode = new Node(val);
     if (head == NULL) // handle corner case..
@@ -22,14 +22,9 @@ void insert_at_tail(Node *&head, int val) // add the new value at the end of the
         return;
     }
 
-    Node *tmp = head;
+    tail->next = newnode; //connection 
+    tail = newnode;//update the tail pointer
 
-    while (tmp->next != NULL)
-    {
-        tmp = tmp->next;
-    }
-
-    tmp->next = newnode;
     // right now tmp is pointing to the last node
 }
 void print_list(Node *head)
@@ -44,15 +39,15 @@ void print_list(Node *head)
 
 int main()
 {
-    Node *head = new Node(1); //track first one as a head
+    Node *head = new Node(1); // track first one as a head
     Node *a = new Node(2);
-    Node *tail = new Node(3);//track last one as a tail
-    
+    Node *tail = new Node(3); // track last one as a tail
 
     head->next = a;
     a->next = tail;
-    
-    insert_at_tail(head, 40);
+
+    insert_at_tail(head, tail, 40);
     print_list(head);
+    cout<<tail->val<<endl;
     return 0;
 }
