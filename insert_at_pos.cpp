@@ -15,7 +15,7 @@ public:
 
 void insert_at_position(Node *&head, int index, int val) // add the new value at the end of the list
 {
-    Node* newnode=new Node(val);
+    Node* newnode=new Node(val); 
     Node* tmp=head;
     for(int i=1;i<index;i++){
         tmp=tmp->next;
@@ -44,6 +44,7 @@ int main()
     a->next = b;
 
     insert_at_position(head, 2, 40);
+    insert_at_position(head, 3, 50);
     print_list(head);
     return 0;
 }
