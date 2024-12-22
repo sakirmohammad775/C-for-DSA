@@ -34,10 +34,10 @@ void deleted_at_any_position(Node* &head,Node* &tail,int index){
     for( int i=1;i<index;i++){
         tmp=tmp->next;
     }
-    Node* deleteNode=tmp->next;
+    Node* deleteNode=tmp->next; // Store the node to be deleted in deleteNode
     tmp->next=tmp->next->next; //connect the node before the node to be deleted with the node after the node to be deleted
-    delete deleteNode;
-    tail=tmp;
+    delete deleteNode; // delete the node to be deleted
+    tail=tmp;// update the tail pointer
 }
 
 int main() {
