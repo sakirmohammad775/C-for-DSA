@@ -48,7 +48,10 @@ int main()
     Node *b = new Node(4);
     Node*tail=new Node(5);
 
-   
+    head->next = a;
+    a->prev = head;
+    a->next = b;
+    b->prev = a;
 
     tail->prev=b;
     b->next=tail;
