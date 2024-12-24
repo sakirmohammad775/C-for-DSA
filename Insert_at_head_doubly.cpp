@@ -13,9 +13,6 @@ public:
         this->prev = NULL; // Initialize prev pointer to NULL
     }
 };
-void insert_head()
-{
-}
 void print_insert(Node *&head)
 {
     Node *temp = head;
@@ -26,43 +23,34 @@ void print_insert(Node *&head)
     }
     cout << endl;
 }
-
-void insert_at_head(Node *&head,int val)
-{
-    Node* newnode=new Node(val);
-    newnode->next=head;
-    head->prev=newnode;
-    head=newnode;
-
+void insert_at_tail(Node* &head, Node* &tail,int val){
+     Node* newnode=new Node(val);
+     if(head==NULL){
+        head=newnode;
+        tail=newnode;
+        return; // return if head is null   
+     }
+     tail->next=newnode;
+     newnode->prev=tail;
+     tail=newnode;
 }
-void insert_at_tail(Node* &tail, int val){
-    Node* newnode=new Node(val);
-    newnode->prev=tail;
-    tail->next=newnode;
-    tail=newnode;
-}
+
+
+
 int main()
 {
     Node *head = new Node(2);
     Node *a = new Node(3);
-    Node *b = new Node(4);
-    Node*tail=new Node(5);
+    Node *tail = new Node(5);
 
     head->next = a;
     a->prev = head;
-    a->next = b;
-    b->prev = a;
 
-    tail->prev=b;
-    b->next=tail;
-    a->next=b;
-    b->prev=a;
+    a->next = tail;
+    tail->prev = a;
 
+    insert_at_tail(head,tail, 100);
 
-
-
-    insert_at_head(head,100);
-    insert_at_tail(tail,30);
     print_insert(head);
 
     return 0;
