@@ -9,7 +9,7 @@ public:
         this->val = val;   // Initialize the node's value with the given 'val'
         this->next = NULL; // Initialize next pointer to NULL
         this->prev=NULL; // Initialize prev pointer to NULL
-    }
+    }f
 };
 void print_insert(Node *&head)
 {
@@ -29,7 +29,8 @@ void delete_at_any_pos(Node* &head,int idx){
     Node* deletenode=tmp->next;
     tmp->next=tmp->next->next;
     tmp->next->prev=tmp;
-    
+    delete deletenode;
+
     
 }
 
@@ -43,5 +44,7 @@ int main() {
 
     a->next = tail;
     tail->prev = a;
+    delete_at_any_pos(head,1);
+    print_insert(head);
     return 0;
 }
